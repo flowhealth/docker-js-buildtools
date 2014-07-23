@@ -9,5 +9,5 @@ RUN wget https://saucelabs.com/downloads/sc-4.3-linux.tar.gz -O - | tar -xz -C /
 RUN npm -g install grunt grunt-cli bower protractor
 
 # Add gihtub RSA fingerprint
-# RUN mkdir /root/.ssh && touch /root/.ssh/known_hosts && ssh-keyscan -H "github.com" >> /root/.ssh/known_hosts && chmod 600 /root/.ssh/known_hosts
+RUN mkdir /root/.ssh && touch /root/.ssh/known_hosts && ssh-keyscan -H "github.com" >> /root/.ssh/known_hosts && chmod 600 /root/.ssh/known_hosts
 
